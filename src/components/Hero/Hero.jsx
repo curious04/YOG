@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Header from '../Header/Header';
 import './Hero.css';
 
@@ -8,11 +8,45 @@ import heart from '../../assets/heart.png';
 import calories from '../../assets/calories.png';
 
 import {motion} from 'framer-motion';
-import NumberCounter from 'number-counter';
+// import NumberCounter from 'number-counter';
 
 const Hero = () => {
+  const ModalShow = {
+    
+    "display": "block",
+    "zIndex": "999",
+    "width": "90%",
+    "height": "120%",
+    "position": "absolute",
+    "top": "100vh",
+    "left": "70px",
+    "borderRadius": "20px",
+  "transform": "translateZ(0px)",
+  "overflow": "hidden"
+}
+
+const ModalHide = {
+  
+  "display": "none",
+  "zIndex": "999",
+  "width": "90%",
+  "height": "120%",
+  "position": "absolute",
+  "top": "100vh",
+  "left": "70px",
+  "borderRadius": "20px",
+  "transform": "translateZ(0px)",
+  "overflow": "hidden"
+}
+
   const transition = {type: 'spring', duration : 10 }
   const mobile = window.innerWidth <= 768 ? true : false;
+  const [display, setdisplay] = useState(ModalHide);
+
+  const fallback = () => {
+    alert("Ml model in building progress...");
+  }
+
 
   return (
   <div className='hero' id='home'>
@@ -74,12 +108,12 @@ const Hero = () => {
       
       {/* HERO BUTTONS */}
         <div className="hero-buttons">
-          <a href='https://storage.googleapis.com/tfjs-models/demos/pose-detection/index.html?model=movenet' arget="_blank" rel="noreferrer">
-          <buttons className="btn btn-started">Get Started</buttons>
-          </a>
-          <buttons className="btn btn-learn">Learn More</buttons>
+          <buttons className="btn btn-learn" onClick={() => setdisplay(ModalShow)}>Show Projection</buttons>
+          <buttons className="btn btn-started" onClick={() => setdisplay(ModalHide)}>Close Modal</buttons>
         </div>
-
+        <center><div id="mlmodel" style={{"borderRadius":"30px"}}>
+        <iframe src="https://srini-movenet.web.app/" scrolling="no" allow="camera;microphone" width="100%" height="100%" title='frame' style={display} onError={fallback}></iframe>
+        </div></center>
 
     </div>
       <div className="right-h">
