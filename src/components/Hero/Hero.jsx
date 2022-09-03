@@ -118,7 +118,8 @@ const ModalHide = {
     </div>
       <div className="right-h">
         {/* join now btn */}
-        <button className='btn btn-j'> Join Now</button>
+          <button className='btn btn-j'> Join Now</button>
+        
 
 
         {/* Heart rate box */}

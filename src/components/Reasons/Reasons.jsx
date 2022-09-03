@@ -32,19 +32,19 @@ const Reasons = () => {
             <div className='details-r'>
                 <div className='details-img-text'>
                     <img src={tick} alt="" />
-                    <span>OVER 140+ EXPERT COACHES</span>
+                    <span>easy option for procrastinators</span>
                 </div>
                 <div className='details-img-text'>
                     <img src={tick} alt="" />
-                    <span>TRAIN SMARTER AND FASTER THAN BEFORE</span>
+                    <span>multiple options to explore</span>
                 </div>
                 <div className='details-img-text'>
                     <img src={tick} alt="" />
-                    <span>1 FREE PROGRAM FOR NEW MEMBER</span>
+                    <span>cost-effective</span>
                 </div>
                 <div className='details-img-text'>
                     <img src={tick} alt="" />
-                    <span>RELIABLE PARTNERS</span>
+                    <span>offers comfortable space</span>
                 </div>
 
                 <div className="our-partners">

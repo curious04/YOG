@@ -39,7 +39,7 @@ const Join = () => {
             
                 <input type="email" name='user_email'
                 placeholder='Enter Your Email Here'/>
-
+                
                 <button className='btn btn-join'>Join Now</button>
             </form>
 
