@@ -1,7 +1,10 @@
 import React,{useState} from 'react';
 import Header from '../Header/Header';
 import './Hero.css';
-
+import Pos from '../../assets/posture.png';
+import Inf from '../../assets/info.jpeg';
+import Swal from 'sweetalert2'
+import Joyride from 'react-joyride';
 import hero_image from '../../assets/hero_image.png';
 import hero_image_back from '../../assets/hero_image_back.png';
 import heart from '../../assets/heart.png';
@@ -18,7 +21,7 @@ const Hero = () => {
     "width": "90%",
     "height": "120%",
     "position": "absolute",
-    "top": "100vh",
+    "top": "120vh",
     "left": "70px",
     "borderRadius": "20px",
   "transform": "translateZ(0px)",
@@ -32,7 +35,7 @@ const ModalHide = {
   "width": "90%",
   "height": "120%",
   "position": "absolute",
-  "top": "100vh",
+  "top": "120vh",
   "left": "70px",
   "borderRadius": "20px",
   "transform": "translateZ(0px)",
@@ -43,13 +46,48 @@ const ModalHide = {
   const mobile = window.innerWidth <= 768 ? true : false;
   const [display, setdisplay] = useState(ModalHide);
 
+  const steps = [
+    {
+      target: '.btn.btn-j',
+      content: `is a YOGA Posture correction Machine Learning based Web App\nthat helps to practice yoga\n click on that show projection to open modal`,
+    },
+    {
+      target: '.btn.btn-learn',
+      content: 'Click on this button to load ML Model \n ML model will take some time to load please wait...',
+    },
+    {
+      target: '.mlmodel',
+      content: <img src={Pos} alt="img" height="300px" width="330px"/>,
+    },
+    {
+      target: '.btn.btn-started',
+      content: 'Click This Button to close ML Model',
+    }
+  ]
+
   const fallback = () => {
     alert("Ml model in building progress...");
   }
 
+  const mlstart = () =>{
+    Swal.fire({
+      icon: 'info',
+      text: 'Click on Show Projection 😀',
+      imageUrl: Inf,
+      imageWidth: 500,
+      imageHeight: 350,
+      imageAlt: 'Custom image',
+    })
+  } 
+
 
   return (
   <div className='hero' id='home'>
+  <Joyride
+          steps={steps}
+          showProgress={true}
+         
+        />
       <div className="blur blur-hero"></div>
     <div className="left-h">
       {/* Header */}
@@ -111,15 +149,14 @@ const ModalHide = {
           <buttons className="btn btn-learn" onClick={() => setdisplay(ModalShow)}>Show Projection</buttons>
           <buttons className="btn btn-started" onClick={() => setdisplay(ModalHide)}>Close Modal</buttons>
         </div>
-        <center><div id="mlmodel" style={{"borderRadius":"30px"}}>
+        <center><div className="mlmodel" style={{"borderRadius":"30px"}}>
         <iframe src="https://srini-movenet.web.app/" scrolling="no" allow="camera;microphone" width="100%" height="100%" title='frame' style={display} onError={fallback}></iframe>
         </div></center>
 
     </div>
       <div className="right-h">
         {/* join now btn */}
-          <button className='btn btn-j'> Join Now</button>
-        
+        <button className="btn btn-j" onClick={() => mlstart()}>Start Journey</button>
 
 
         {/* Heart rate box */}
