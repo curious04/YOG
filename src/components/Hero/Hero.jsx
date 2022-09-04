@@ -147,7 +147,7 @@ const ModalHide = {
       {/* HERO BUTTONS */}
         <div className="hero-buttons">
           <buttons className="btn btn-learn" onClick={() => setdisplay(ModalShow)}>Show Projection</buttons>
-          <buttons className="btn btn-started" onClick={() => setdisplay(ModalHide)}>Close Modal</buttons>
+          <buttons className="btn btn-started" onClick={() => setdisplay(ModalHide)}>Close Model</buttons>
         </div>
         <center><div className="mlmodel" style={{"borderRadius":"30px"}}>
         <iframe src="https://srini-movenet.web.app/" scrolling="no" allow="camera;microphone" width="100%" height="100%" title='frame' style={display} onError={fallback}></iframe>

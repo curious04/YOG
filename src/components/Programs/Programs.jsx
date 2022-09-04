@@ -20,7 +20,7 @@ const Programs = () => {
                 {program.image}
                 <span>{program.heading}</span>
                 <span>{program.details}</span>
-                    <div className="join-now"><span>Join now</span>
+                    <div className="join-now"><a href='https://register-nine.vercel.app/'><span>Join now</span></a>
                     <img src={RArrow} alt="arrow" />
                     </div>
             </div>

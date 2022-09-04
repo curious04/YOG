@@ -38,7 +38,7 @@ git clone https://github.com/RishiPratap/YOG-APP-MesoHacks-2022.git
 First, run the development server:
 
 ```bash
-npm run dev
+npm start
 # or
 yarn dev
 ```
