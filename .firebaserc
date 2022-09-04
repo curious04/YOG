@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "yog4u-f53e7"
-  }
+    "default": "yog4u-a6eb6",
+    "build": "yog4u-a6eb6"
+  },
+  "targets": {}
 }

@@ -16,12 +16,12 @@
     align-items: center;
 }
 
-.socials {
+a,.socials {
     display: flex;
     gap: 4rem;
 }
 
-.socials>img {
+a,.socials>img {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -48,3 +48,4 @@
     filter: blur(200px);
     background: rgb(255, 115, 0);
 }
+

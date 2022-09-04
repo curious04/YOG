@@ -40,6 +40,12 @@ const Header = () => {
               Programs
               </Link>
             </li>
+            
+            <li> 
+              
+              About Us
+              
+            </li>
 
             <li> 
               <Link 
