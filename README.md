@@ -91,7 +91,7 @@ SRIHARI S
 <img src = "https://avatars.githubusercontent.com/u/62781914?v=4"  height="120" alt="SRIHARI S">
 </p>
 <p align="center">
-<a href = "https://github.com/notahuman-1-0"><img src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="36" height = "36"/></a>
+<a href = "https://github.com/SSHSRN"><img src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="36" height = "36"/></a>
 <a href = "https://www.linkedin.com/in/sshsrn/">
 <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png" width="36" height="36"/>
 </a>
